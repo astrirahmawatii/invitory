@@ -1,0 +1,4 @@
+CREATE DATABASE db_barang_astri 
+
+CREATE TABLE barang
+( id_barang integer PRIMARY KEY, nama_barang varchar (50), id_jenis interger,  harga interger, stok interger) 
