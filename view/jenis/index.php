@@ -17,13 +17,14 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../barang">barang</a>
+          <a class="nav-link active" aria-current="page" href="../barang">Barang</a>
+         
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="../jenis/index.php">Jenis</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -39,8 +40,8 @@
     </div>
   </div>
 </nav>
-    <h1>data barang</h1>
-    <a href="tambah.php" class="btn btn-info">Tambah Data Baru</a>
+    <h1>jenis barang</h1>
+    <a href="tambah.php" class="btn btn-info"><i class="fa-solid fa-plus"></i> Tambah jenis Baru</a>
     <table class="table table-striped">
             <tr> 
                 <th scope="col">No</th>
@@ -61,13 +62,16 @@
                         <td><?php echo $result['id_jenis'] ?> </td>
                         <td><?php echo $result['nama_jenis'] ?> </td>
                         <td>
-                            <a href="" class="btn btn-warning">Edit</a>
-                            <a href="" class="btn btn-danger">Hapus</a>
+                            <a href="edit.php?id_jenis=<?php echo $result['id_jenis']?>" class= "btn btn-warning">Edit</a>
+                    
                         </td>
                     </tr>
                     <?php
-                    }
-            }
+                       $no++;
+                }
+                  }else{
+                    echo "Data Kosong";
+                  }
             ?>
     </table>
 </div>
